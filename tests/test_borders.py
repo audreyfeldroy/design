@@ -23,7 +23,7 @@ class TestBorders(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        # os.remove('circles.png')
+        os.remove('circles.png')
 
 if __name__ == '__main__':
     unittest.main()
