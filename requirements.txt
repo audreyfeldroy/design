@@ -1,1 +1,2 @@
 Sphinx==1.2b1
+pycairo==1.10.0

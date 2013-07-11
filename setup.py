@@ -38,7 +38,7 @@ setup(
     include_package_data=True,
     install_requires=[
         'Pillow',
-        'PyCairo',
+        # 'pycairo',  # Must be installed manually :(
     ],
     license=license,
     zip_safe=False,
