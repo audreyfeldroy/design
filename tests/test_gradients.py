@@ -12,13 +12,15 @@ import imghdr
 import os
 import unittest
 
+from colors import rgb
 from design import gradients
 
 
 class TestGradients(unittest.TestCase):
 
     def test_vertical_strip(self):
-        gradients.vertical_strip(width=10, height=107, color=[255, 252, 229])
+        gradients.vertical_strip(width=10, height=107,
+                                 color=rgb(255, 252, 229))
         self.assertEqual(imghdr.what('vertical_strip.png'), 'png')
 
     def test_vertical_white(self):

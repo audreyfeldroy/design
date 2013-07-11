@@ -12,16 +12,16 @@ Functions for creating gradient graphics.
 """
 
 import cairo
+from colors import rgb
 
 
-def vertical_strip(width=10, height=100, color=[100, 100, 100], subtlety=0.1):
+def vertical_strip(width=10, height=100, color=rgb(100, 100, 100),
+                   subtlety=0.1):
     """
     Draws a subtle vertical gradient strip.
     """
 
-    red = color[0] / 255.0
-    green = color[1] / 255.0
-    blue = color[2] / 255.0
+    cairo_color = color / rgb(255, 255, 255)
 
     surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
     ctx = cairo.Context(surface)
@@ -29,8 +29,20 @@ def vertical_strip(width=10, height=100, color=[100, 100, 100], subtlety=0.1):
     ctx.scale(width / 1.0, height / 1.0)
 
     pat = cairo.LinearGradient(0.0, 0.0, 0.0, 1.0)
-    pat.add_color_stop_rgba(0, red, green, blue, 0)
-    pat.add_color_stop_rgba(1, red, green, blue, 1)
+    pat.add_color_stop_rgba(
+        0,
+        cairo_color.red,
+        cairo_color.green,
+        cairo_color.blue,
+        0
+    )
+    pat.add_color_stop_rgba(
+        1,
+        cairo_color.red,
+        cairo_color.green,
+        cairo_color.blue,
+        1
+    )
 
     ctx.rectangle(0, 0, 1, 1)
     ctx.set_source(pat)
