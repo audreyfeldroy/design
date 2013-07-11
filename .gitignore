@@ -40,3 +40,4 @@ docs/_build
 # Design test output
 test-output/
 design/*.png
+tests/*.png
