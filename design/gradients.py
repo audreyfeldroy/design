@@ -11,7 +11,6 @@ Functions for creating gradient graphics.
     See http://www.colorzilla.com/gradient-editor/
 """
 
-import math
 import cairo
 
 
@@ -27,17 +26,18 @@ def vertical_strip(width=10, height=100, color=[100, 100, 100], subtlety=0.1):
     surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
     ctx = cairo.Context(surface)
 
-    ctx.scale (width/1.0, height/1.0)
+    ctx.scale(width / 1.0, height / 1.0)
 
     pat = cairo.LinearGradient(0.0, 0.0, 0.0, 1.0)
     pat.add_color_stop_rgba(0, red, green, blue, 0)
     pat.add_color_stop_rgba(1, red, green, blue, 1)
 
-    ctx.rectangle(0,0,1,1)
+    ctx.rectangle(0, 0, 1, 1)
     ctx.set_source(pat)
     ctx.fill()
 
     surface.write_to_png('vertical_strip.png')
+
 
 def vertical_white(width=10, height=100, subtlety=0.1):
     """
@@ -50,13 +50,13 @@ def vertical_white(width=10, height=100, subtlety=0.1):
     surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
     ctx = cairo.Context(surface)
 
-    ctx.scale (width/1.0, height/1.0)
+    ctx.scale(width/1.0, height/1.0)
 
     pat = cairo.LinearGradient(0.0, 0.0, 0.0, 1.0)
     pat.add_color_stop_rgba(0, 1, 1, 1, start)
     pat.add_color_stop_rgba(1, 1, 1, 1, end)
 
-    ctx.rectangle(0,0,1,1)
+    ctx.rectangle(0, 0, 1, 1)
     ctx.set_source(pat)
     ctx.fill()
 
