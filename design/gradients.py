@@ -1,13 +1,18 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+gradients
+---------
+
+Functions for creating gradient graphics.
+
+.. note:: CSS3 gradients are better than image gradient strips in most cases.
+    See http://www.colorzilla.com/gradient-editor/
+"""
 
 import math
 import cairo
-
-# def color_to_range(color, offset):
-#     """
-#     Turns a color tuple into a color range list.
-#     """
-#     color1 = color - [offset, offset, offset]
 
 
 def vertical_strip(width=10, height=100, color=[100, 100, 100], subtlety=0.1):
