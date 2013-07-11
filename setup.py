@@ -39,6 +39,7 @@ setup(
     install_requires=[
         'Pillow',
         # 'pycairo',  # Must be installed manually :(
+        'colors.py',
     ],
     license=license,
     zip_safe=False,
