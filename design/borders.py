@@ -38,9 +38,9 @@ def circles_pycairo(width, height, color):
     ctx.fill()  # stroke current path
 
     # save to PNG
-    surface.write_to_png('circles_pycairo.png')
+    surface.write_to_png('circles.png')
 
-def circles(width=12, height=12, color=rgb(255, 252, 229)):
+def circles(width=12, height=12, color=rgb(255, 255, 255)):
     """ Draws a repeatable circle border pattern. """
 
     circles_pycairo(width, height, color)
