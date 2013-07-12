@@ -1,2 +1,4 @@
 Sphinx==1.2b1
-pycairo==1.10.0
+cairocffi==0.5
+# pycairo==1.10.0
+colors.py==0.2.0
