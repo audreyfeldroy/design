@@ -7,7 +7,7 @@ Contributions are welcome!
 Submitting Feedback
 -------------------
 
-The best way to send feedback is to file an issue at https://github.com/audreyr/sphinx-gui/issues.
+The best way to send feedback is to file an issue at https://github.com/audreyr/design/issues.
 
 If you are reporting a bug, please include:
 
