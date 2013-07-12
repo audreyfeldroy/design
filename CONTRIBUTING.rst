@@ -46,7 +46,10 @@ Now you can make your changes locally.
 
 5. When you're done making changes, check that your changes pass the tests and flake8::
 
-    # TODO
+    $ python -m unittest discover tests
+    $ flake8 design
+    $ flake8 tests
+    $ flake8 examples
 
 6. Commit your changes and push your branch to GitHub::
 
