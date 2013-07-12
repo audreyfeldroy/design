@@ -11,8 +11,12 @@ Functions for creating gradient graphics.
     See http://www.colorzilla.com/gradient-editor/
 """
 
-import cairo
 from colors import rgb
+
+try:
+    import cairo
+except ImportError:
+    import cairocffi as cairo
 
 
 def vertical_strip(width=10, height=100, color=rgb(100, 100, 100),

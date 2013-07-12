@@ -11,9 +11,13 @@ Functions for creating border pattern graphics.
 
 from math import pi
 
-import cairo
 from colors import rgb
 from PIL import Image, ImageDraw
+
+try:
+    import cairo
+except ImportError:
+    import cairocffi as cairo
 
 
 def circles_pil(width, height, color):
