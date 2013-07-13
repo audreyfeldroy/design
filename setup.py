@@ -17,7 +17,6 @@ if sys.argv[-1] == 'publish':
 
 readme = open('README.rst', 'rt').read()
 history = open('HISTORY.rst', 'rt').read()
-license = open('LICENSE', 'rt').read()
 
 setup(
     name='design',
@@ -35,11 +34,11 @@ setup(
     install_requires=[
         'Pillow',
         'colors.py',
-        # 'pycairo',  # Must be installed manually :(
+        'cairocffi',
     ],
-    license=license,
+    license='BSD',
     zip_safe=False,
-    classifiers=(
+    classifiers=[
         'Development Status :: 1 - Planning',
         'Intended Audience :: Developers',
         'Natural Language :: English',
@@ -49,7 +48,7 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
-    ),
+    ],
     keywords='design graphics generator border pattern texture gradient \
         PIL Pillow PyCairo png webdesign',
 )
