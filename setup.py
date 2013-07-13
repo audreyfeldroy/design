@@ -56,4 +56,5 @@ setup(
     ],
     keywords='design graphics generator border pattern texture gradient \
         PIL Pillow PyCairo png webdesign',
+    test_suite='tests',
 )
