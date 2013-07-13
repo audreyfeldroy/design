@@ -11,8 +11,13 @@ try:
 except ImportError:
     from distutils.core import setup
 
+version = design.__version__
+
 if sys.argv[-1] == 'publish':
     os.system('python setup.py sdist upload')
+    print("You probably want to also tag the version now:")
+    print("  git tag -a %s -m 'version %s'" % (version, version))
+    print("  git push --tags")
     sys.exit()
 
 readme = open('README.rst', 'rt').read()
@@ -20,7 +25,7 @@ history = open('HISTORY.rst', 'rt').read()
 
 setup(
     name='design',
-    version=design.__version__,
+    version=version,
     description='Generates various common web design elements. Borders, \
         patterns, textures, gradients, etc.',
     long_description=readme + '\n\n' + history,
