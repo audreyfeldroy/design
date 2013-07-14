@@ -20,10 +20,6 @@ Contents:
    modules
 
 
-.. automodule::
-   design
-   
-
 Indices and tables
 ==================
 
