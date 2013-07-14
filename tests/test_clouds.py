@@ -12,7 +12,6 @@ import imghdr
 import os
 import unittest
 
-from colors import rgb
 from design import clouds
 
 
@@ -24,7 +23,6 @@ class TestClouds(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        pass
         os.remove('cloud.png')
 
 if __name__ == '__main__':

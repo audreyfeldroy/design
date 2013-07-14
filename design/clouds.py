@@ -12,7 +12,6 @@ Functions for creating cloud graphics.
 from math import pi
 
 from colors import rgb
-from PIL import Image, ImageDraw
 
 try:
     import cairo
