@@ -17,7 +17,12 @@ Contents:
    contributing
    authors
    history
+   modules
 
+
+.. automodule::
+   design
+   
 
 Indices and tables
 ==================
