@@ -35,6 +35,7 @@ setup(
     packages=[
         'design',
     ],
+    package_dir={'design': 'design'},
     include_package_data=True,
     install_requires=[
         'Pillow',
