@@ -25,4 +25,12 @@ The above would result in these files being generated:
     * js/arrow.js
     * arrow.html (Demo of the arrow in action.)
 
-Ideas/feedback? File an issue!
+FileManager.py
+---------------
+
+def splitUrl
+* Takes a url, splites it to and splits it to get the file type
+Example usage::
+    url = splitUrl()
+
+		
