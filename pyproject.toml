@@ -5,9 +5,20 @@ description = "Add your description here"
 authors = [
     { name = "Audrey Roy Greenfeld", email = "aroy@alum.mit.edu" }
 ]
-dependencies = []
+dependencies = [
+    colors.py==0.2.0
+]
 readme = "README.md"
 requires-python = ">= 3.8"
+
+[project.optional-dependencies]
+bitmapgen = [
+    Pillow==10.3.0
+]
+svggen = [
+    cairocffi==0.5
+    # or pycairo==1.10.0 if that doesn't work
+]
 
 [build-system]
 requires = ["hatchling"]
