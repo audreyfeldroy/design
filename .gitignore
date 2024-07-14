@@ -41,3 +41,6 @@ docs/_build
 test-output/
 design/*.png
 tests/*.png
+
+# Virtualenvs
+.venv
